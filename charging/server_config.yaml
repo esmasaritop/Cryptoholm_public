@@ -1,0 +1,41 @@
+accepted_chargers:
+- model: E2507
+  serial_number_regex: .*
+  vendor_name: EmuOCPPCharge
+accepted_tokens:
+- id_token: '11223344'
+  type: ISO14443
+- id_token: '11223344556677'
+  type: ISO14443
+- id_token: '1122334455667788'
+  type: ISO15693
+comm:
+  NetworkConfigurationPriority:
+  - 0
+dns: null
+iip: 127.0.0.1
+ip: 127.0.0.1
+model: E2507
+ocpp_version: 2.0.1
+port0: 9000
+port1: 9001
+port2: 9002
+port3: 9003
+port4: 9004
+port5: 9005
+port6: 9006
+port7: 9007
+profiles:
+  0:
+    SP: 0
+    ip: 127.0.0.1
+    message_timeout: 30
+    ocpp_version: OCPP201
+security:
+  Identity: CP-TEST
+  SecurityProfile: 0
+security_profile: 0
+server_port: 9000
+url: null
+vendor_name: EmuOCPPCharge
+version: v2.0.1
