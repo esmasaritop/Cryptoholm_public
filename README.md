@@ -1,3 +1,37 @@
+# ⚡ EmuOCPP – OCPP 2.0.1 Şarj İstasyonu Emülatörü
+
+Bu proje, **OCPP (Open Charge Point Protocol)** standardına göre bir **şarj istasyonu (client)** ve **merkezi sistem (server)** simülasyonudur.  
+Amaç, OCPP mesajlaşma sürecini anlamak ve özellikle **sensör verisi anomalilerini (bozuk veya eksik veriler)** test etmektir.
+
+---
+
+## 🚀 Başlarken
+
+### Gereksinimler
+- Python 3.11+
+- `pip install -r requirements.txt`  
+  (gerekli kütüphaneler: `websockets`, `ocpp`, `aioconsole`, `cryptography`, `pyyaml`)
+
+---
+
+## ⚙️ Kurulum ve Çalıştırma
+
+### 1️⃣ Sanal ortam oluştur
+```bash
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+
+
+###Altaki EMULATÖRDEN YARARLANILMIŞTIR
+
+
+
+
+
+
+
+
 # EmuOCPP
 
 ## Introduction
@@ -100,3 +134,4 @@ venv/bin/python3 charging/api_client.py reserve
 ```
 
 We appreciate you choosing this OCPP Simulator to meet your needs for simulation and testing. Savor the smooth charging process! :)
+
