@@ -1,0 +1,1178 @@
+{
+  "simulation_date": "2025-11-11T21:41:52.870592",
+  "metrics": {
+    "true_positives": 200,
+    "false_positives": 213,
+    "true_negatives": 587,
+    "false_negatives": 0,
+    "accuracy": 0.787,
+    "precision": 0.48426150121065376,
+    "recall": 1.0,
+    "f1_score": 0.6525285481239804,
+    "total_sessions": 1000,
+    "fraudulent_sessions": 200,
+    "blocked_sessions": 413,
+    "total_fraud_cost_tl": 41319.48543242017,
+    "prevented_fraud_cost_tl": 41319.48543242017,
+    "undetected_fraud_cost_tl": 0.0,
+    "fraud_prevention_rate": 100.0
+  },
+  "detection_results": [
+    {
+      "session_id": "SESSION_000000",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.799907498329318
+    },
+    {
+      "session_id": "SESSION_000001",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.77540106685746
+    },
+    {
+      "session_id": "SESSION_000002",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7138842955916364
+    },
+    {
+      "session_id": "SESSION_000003",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7841315455576452
+    },
+    {
+      "session_id": "SESSION_000004",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9364361321229101
+    },
+    {
+      "session_id": "SESSION_000005",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7041345534491209
+    },
+    {
+      "session_id": "SESSION_000006",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7971563395518696
+    },
+    {
+      "session_id": "SESSION_000007",
+      "is_fraudulent": false,
+      "anomalies": [
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 20.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.8990463926212279
+    },
+    {
+      "session_id": "SESSION_000008",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7351962739859618
+    },
+    {
+      "session_id": "SESSION_000009",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9601296881030033
+    },
+    {
+      "session_id": "SESSION_000010",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9156905963719744
+    },
+    {
+      "session_id": "SESSION_000011",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7598523176871252
+    },
+    {
+      "session_id": "SESSION_000012",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9513017642143552
+    },
+    {
+      "session_id": "SESSION_000013",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7659514290205318
+    },
+    {
+      "session_id": "SESSION_000014",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7107808901524624
+    },
+    {
+      "session_id": "SESSION_000015",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7478400954904943
+    },
+    {
+      "session_id": "SESSION_000016",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8211281858557049
+    },
+    {
+      "session_id": "SESSION_000017",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7511781451888113
+    },
+    {
+      "session_id": "SESSION_000018",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7236870074019117
+    },
+    {
+      "session_id": "SESSION_000019",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8050609284937315
+    },
+    {
+      "session_id": "SESSION_000020",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8198199190019615
+    },
+    {
+      "session_id": "SESSION_000021",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7834182144087926
+    },
+    {
+      "session_id": "SESSION_000022",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9120383318625648
+    },
+    {
+      "session_id": "SESSION_000023",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9124337752317968
+    },
+    {
+      "session_id": "SESSION_000024",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7859457890623904
+    },
+    {
+      "session_id": "SESSION_000025",
+      "is_fraudulent": false,
+      "anomalies": [
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 20.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.8528593152057449
+    },
+    {
+      "session_id": "SESSION_000026",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7403338954648417
+    },
+    {
+      "session_id": "SESSION_000027",
+      "is_fraudulent": false,
+      "anomalies": [
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 20.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.8584601331605675
+    },
+    {
+      "session_id": "SESSION_000028",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8226282067322135
+    },
+    {
+      "session_id": "SESSION_000029",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.800136045344837
+    },
+    {
+      "session_id": "SESSION_000030",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7414500445154376
+    },
+    {
+      "session_id": "SESSION_000031",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9132261913247333
+    },
+    {
+      "session_id": "SESSION_000032",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7702700246091959
+    },
+    {
+      "session_id": "SESSION_000033",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7514926948657648
+    },
+    {
+      "session_id": "SESSION_000034",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7082467994002575
+    },
+    {
+      "session_id": "SESSION_000035",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7786061633275051
+    },
+    {
+      "session_id": "SESSION_000036",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8191924487253305
+    },
+    {
+      "session_id": "SESSION_000037",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8055755786861644
+    },
+    {
+      "session_id": "SESSION_000038",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9673684651094585
+    },
+    {
+      "session_id": "SESSION_000039",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7566254833003091
+    },
+    {
+      "session_id": "SESSION_000040",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.900901394753331
+    },
+    {
+      "session_id": "SESSION_000041",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8015920800330915
+    },
+    {
+      "session_id": "SESSION_000042",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9352184176270394
+    },
+    {
+      "session_id": "SESSION_000043",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8090613465620469
+    },
+    {
+      "session_id": "SESSION_000044",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.8503680141195439
+    },
+    {
+      "session_id": "SESSION_000045",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.702822913641979
+    },
+    {
+      "session_id": "SESSION_000046",
+      "is_fraudulent": false,
+      "anomalies": [
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 20.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.8660127780896079
+    },
+    {
+      "session_id": "SESSION_000047",
+      "is_fraudulent": false,
+      "anomalies": [
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 20.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.8836138087207174
+    },
+    {
+      "session_id": "SESSION_000048",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9279085525696579
+    },
+    {
+      "session_id": "SESSION_000049",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9471285950526339
+    },
+    {
+      "session_id": "SESSION_000050",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8069888018478644
+    },
+    {
+      "session_id": "SESSION_000051",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7862748441973004
+    },
+    {
+      "session_id": "SESSION_000052",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8270909297156575
+    },
+    {
+      "session_id": "SESSION_000053",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9795836039305568
+    },
+    {
+      "session_id": "SESSION_000054",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7548920730857541
+    },
+    {
+      "session_id": "SESSION_000055",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8019447586670978
+    },
+    {
+      "session_id": "SESSION_000056",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9591400665545994
+    },
+    {
+      "session_id": "SESSION_000057",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8325056972509453
+    },
+    {
+      "session_id": "SESSION_000058",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9327131191286099
+    },
+    {
+      "session_id": "SESSION_000059",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8415717462659802
+    },
+    {
+      "session_id": "SESSION_000060",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8444263048313181
+    },
+    {
+      "session_id": "SESSION_000061",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7730573076049607
+    },
+    {
+      "session_id": "SESSION_000062",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8379977358383417
+    },
+    {
+      "session_id": "SESSION_000063",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9820219176644249
+    },
+    {
+      "session_id": "SESSION_000064",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9745097483800411
+    },
+    {
+      "session_id": "SESSION_000065",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7992172841959158
+    },
+    {
+      "session_id": "SESSION_000066",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9837160949898681
+    },
+    {
+      "session_id": "SESSION_000067",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8055998035960651
+    },
+    {
+      "session_id": "SESSION_000068",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9477098481927457
+    },
+    {
+      "session_id": "SESSION_000069",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8161005339728112
+    },
+    {
+      "session_id": "SESSION_000070",
+      "is_fraudulent": false,
+      "anomalies": [
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 20.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.8793722103456044
+    },
+    {
+      "session_id": "SESSION_000071",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8454347686133888
+    },
+    {
+      "session_id": "SESSION_000072",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8125891326325159
+    },
+    {
+      "session_id": "SESSION_000073",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.819575739818029
+    },
+    {
+      "session_id": "SESSION_000074",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8269052975110137
+    },
+    {
+      "session_id": "SESSION_000075",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8484452112595553
+    },
+    {
+      "session_id": "SESSION_000076",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8085638130574712
+    },
+    {
+      "session_id": "SESSION_000077",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7716358700589476
+    },
+    {
+      "session_id": "SESSION_000078",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9135432707516022
+    },
+    {
+      "session_id": "SESSION_000079",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9290221001890347
+    },
+    {
+      "session_id": "SESSION_000080",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8477830030611384
+    },
+    {
+      "session_id": "SESSION_000081",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8302651160350673
+    },
+    {
+      "session_id": "SESSION_000082",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7848505446639678
+    },
+    {
+      "session_id": "SESSION_000083",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8076616409379705
+    },
+    {
+      "session_id": "SESSION_000084",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7937108998184814
+    },
+    {
+      "session_id": "SESSION_000085",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.740721751662783
+    },
+    {
+      "session_id": "SESSION_000086",
+      "is_fraudulent": false,
+      "anomalies": [
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 20.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.8647677979086507
+    },
+    {
+      "session_id": "SESSION_000087",
+      "is_fraudulent": false,
+      "anomalies": [
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 20.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.8928622962583955
+    },
+    {
+      "session_id": "SESSION_000088",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8488478417048423
+    },
+    {
+      "session_id": "SESSION_000089",
+      "is_fraudulent": false,
+      "anomalies": [
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 20.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.8600606884269666
+    },
+    {
+      "session_id": "SESSION_000090",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7157451686960905
+    },
+    {
+      "session_id": "SESSION_000091",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7365061478026619
+    },
+    {
+      "session_id": "SESSION_000092",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8071295084145035
+    },
+    {
+      "session_id": "SESSION_000093",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9288719226305634
+    },
+    {
+      "session_id": "SESSION_000094",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8117130718877503
+    },
+    {
+      "session_id": "SESSION_000095",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7142824485507814
+    },
+    {
+      "session_id": "SESSION_000096",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9368235316594818
+    },
+    {
+      "session_id": "SESSION_000097",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "WEATHER_LOW_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 65.0,
+      "should_block": true,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.7105911498105987
+    },
+    {
+      "session_id": "SESSION_000098",
+      "is_fraudulent": false,
+      "anomalies": [],
+      "risk_score": 0.0,
+      "should_block": false,
+      "requires_manual_verification": false,
+      "anpr_confidence": 0.9083050035290964
+    },
+    {
+      "session_id": "SESSION_000099",
+      "is_fraudulent": false,
+      "anomalies": [
+        "LOW_ANPR_CONFIDENCE",
+        "AMBIGUOUS_CHARACTERS"
+      ],
+      "risk_score": 50.0,
+      "should_block": false,
+      "requires_manual_verification": true,
+      "anpr_confidence": 0.8235110887546314
+    }
+  ],
+  "sessions_summary": {
+    "total_sessions": 1000,
+    "normal_sessions": 800,
+    "attack_sessions": 200
+  }
+}

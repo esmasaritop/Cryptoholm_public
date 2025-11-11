@@ -1,0 +1,14 @@
+# ANPR Saldırı Simülasyonu - Gerekli Paketler
+# Python 3.8+
+
+# Veri işleme ve analiz
+numpy>=1.21.0
+pandas>=1.3.0
+
+# Görselleştirme
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Diğer
+dataclasses>=0.6; python_version < '3.7'
+
