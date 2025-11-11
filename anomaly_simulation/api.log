@@ -1,0 +1,88 @@
+
+======================================================================
+    ANOMALY DETECTION API SERVER
+    For OCPP Emulator Integration
+======================================================================
+
+API Version: v1
+Server: http://localhost:5001
+Endpoints:
+  - POST /api/v1/anomaly/insider-threat
+  - POST /api/v1/anomaly/false-positive
+  - POST /api/v1/anomaly/sensor-attack
+  - POST /api/v1/anomaly/all
+  - GET  /api/v1/health
+======================================================================
+
+Starting server...
+
+ * Serving Flask app 'anomaly_api'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.145:5001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 672-313-698
+127.0.0.1 - - [11/Nov/2025 18:16:29] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2025 18:18:59] "POST /api/v1/anomaly/false-positive HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2025 18:22:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2025 18:22:50] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+127.0.0.1 - - [11/Nov/2025 18:22:50] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+ * Detected change in '/Users/ahmedtahacetintas/Desktop/bsgsimu/anomaly_simulation/test_api.py', reloading
+
+======================================================================
+    ANOMALY DETECTION API SERVER
+    For OCPP Emulator Integration
+======================================================================
+
+API Version: v1
+Server: http://localhost:5001
+Endpoints:
+  - POST /api/v1/anomaly/insider-threat
+  - POST /api/v1/anomaly/false-positive
+  - POST /api/v1/anomaly/sensor-attack
+  - POST /api/v1/anomaly/all
+  - GET  /api/v1/health
+======================================================================
+
+Starting server...
+
+
+✓ Grafik kaydedildi: confusion_matrix.png
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 672-313-698
+ * Detected change in '/Users/ahmedtahacetintas/Desktop/bsgsimu/anomaly_simulation/test_api.py', reloading
+
+======================================================================
+    ANOMALY DETECTION API SERVER
+    For OCPP Emulator Integration
+======================================================================
+
+API Version: v1
+Server: http://localhost:5001
+Endpoints:
+  - POST /api/v1/anomaly/insider-threat
+  - POST /api/v1/anomaly/false-positive
+  - POST /api/v1/anomaly/sensor-attack
+  - POST /api/v1/anomaly/all
+  - GET  /api/v1/health
+======================================================================
+
+Starting server...
+
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 672-313-698
+127.0.0.1 - - [11/Nov/2025 18:27:31] "GET /api/v1/health HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2025 18:27:32] "POST /api/v1/anomaly/false-positive HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2025 18:29:35] "GET /api/v1/health HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2025 18:29:36] "POST /api/v1/anomaly/false-positive HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2025 18:29:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2025 18:57:23] "GET /api/v1/health HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2025 18:57:23] "POST /api/v1/anomaly/false-positive HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2025 19:03:28] "GET /api/v1/health HTTP/1.1" 200 -
+127.0.0.1 - - [11/Nov/2025 19:03:29] "POST /api/v1/anomaly/false-positive HTTP/1.1" 200 -
