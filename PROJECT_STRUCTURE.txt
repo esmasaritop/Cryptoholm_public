@@ -1,0 +1,52 @@
+﻿EV-SOC-ATTACK/
+â”‚
+â”œâ”€â”€ ğŸ“„ README.md                    # Ana dokÃ¼mantasyon
+â”œâ”€â”€ ğŸ“„ QUICKSTART.md                # HÄ±zlÄ± baÅŸlangÄ±Ã§ rehberi
+â”œâ”€â”€ ğŸ“„ requirements.txt             # Python baÄŸÄ±mlÄ±lÄ±klarÄ±
+â”œâ”€â”€ ğŸ“„ quickstart.py                # Ä°nteraktif menÃ¼
+â”œâ”€â”€ ğŸ“„ .gitignore                   # Git ignore dosyasÄ±
+â”‚
+â”œâ”€â”€ ğŸ“ src/                         # Kaynak kodlar
+â”‚   â”œâ”€â”€ ğŸ“ bms/                     # Battery Management System
+â”‚   â”‚   â”œâ”€â”€ battery.py              # Batarya simÃ¼lasyonu
+â”‚   â”‚   â”œâ”€â”€ bms_controller.py       # BMS kontrolcÃ¼sÃ¼
+â”‚   â”‚   â””â”€â”€ __init__.py
+â”‚   â”‚
+â”‚   â”œâ”€â”€ ğŸ“ ocpp/                    # OCPP Protocol
+â”‚   â”‚   â”œâ”€â”€ vehicle_client.py       # AraÃ§ istemcisi
+â”‚   â”‚   â”œâ”€â”€ charging_station.py     # Åarj istasyonu
+â”‚   â”‚   â””â”€â”€ __init__.py
+â”‚   â”‚
+â”‚   â”œâ”€â”€ ğŸ“ attack/                  # SaldÄ±rÄ± ModÃ¼lleri
+â”‚   â”‚   â”œâ”€â”€ soc_manipulator.py      # SOC manipÃ¼lasyon
+â”‚   â”‚   â”œâ”€â”€ mitm_proxy.py           # MITM saldÄ±rÄ±sÄ±
+â”‚   â”‚   â””â”€â”€ __init__.py
+â”‚   â”‚
+â”‚   â”œâ”€â”€ ğŸ“ security/                # GÃ¼venlik ModÃ¼lleri
+â”‚   â”‚   â”œâ”€â”€ crypto_handler.py       # Kriptografi
+â”‚   â”‚   â”œâ”€â”€ integrity_checker.py    # BÃ¼tÃ¼nlÃ¼k kontrolÃ¼
+â”‚   â”‚   â””â”€â”€ __init__.py
+â”‚   â”‚
+â”‚   â”œâ”€â”€ ğŸ“ can_bus/                 # CAN Bus SimÃ¼lasyonu
+â”‚   â”‚   â”œâ”€â”€ can_simulator.py        # CAN simÃ¼latÃ¶rÃ¼
+â”‚   â”‚   â””â”€â”€ __init__.py
+â”‚   â”‚
+â”‚   â””â”€â”€ ğŸ“ utils/                   # YardÄ±mcÄ± AraÃ§lar
+â”‚       â”œâ”€â”€ logger.py               # Loglama sistemi
+â”‚       â”œâ”€â”€ visualizer.py           # GÃ¶rselleÅŸtirme
+â”‚       â””â”€â”€ __init__.py
+â”‚
+â”œâ”€â”€ ğŸ“ demos/                       # Demo Scriptleri
+â”‚   â”œâ”€â”€ demo_attack.py              # SaldÄ±rÄ± demosu
+â”‚   â”œâ”€â”€ demo_secure.py              # GÃ¼venli sistem demosu
+â”‚   â””â”€â”€ __init__.py
+â”‚
+â”œâ”€â”€ ğŸ“ tests/                       # Test Suites
+â”‚   â”œâ”€â”€ test_vulnerable.py          # Zafiyet testleri
+â”‚   â”œâ”€â”€ test_secure.py              # GÃ¼venlik testleri
+â”‚   â””â”€â”€ __init__.py
+â”‚
+â””â”€â”€ ğŸ“ logs/                        # Log DosyalarÄ±
+    â””â”€â”€ (otomatik oluÅŸturulur)
+
+TOPLAM: 28 dosya, kapsamlÄ± SOC manipÃ¼lasyon simÃ¼lasyonu!

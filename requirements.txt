@@ -1,0 +1,39 @@
+﻿# EV Charging SOC Manipulation Attack Simulation
+# Python Dependencies
+
+# Core dependencies
+numpy>=1.24.0
+matplotlib>=3.7.0
+python-dateutil>=2.8.0
+
+# Cryptography
+cryptography>=41.0.0
+pycryptodome>=3.18.0
+
+# Networking
+websockets>=11.0.0
+
+# Data handling
+pydantic>=2.0.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+
+# Logging and monitoring
+colorlog>=6.7.0
+rich>=13.0.0
+
+# CAN Bus simulation
+python-can>=4.2.0
+
+# Configuration
+python-dotenv>=1.0.0
+
+# JSON handling
+jsonschema>=4.19.0
+
+# Utilities
+tqdm>=4.66.0
+tabulate>=0.9.0

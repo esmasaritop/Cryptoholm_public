@@ -1,0 +1,297 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║                   🎬 VIDEO SUNUM CHEAT SHEET                              ║
+║         Hızlı Referans - Kamera Önünde Bulundurabilirsiniz                ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎤 1. TANITIM (30 saniye)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ "Merhaba, ben Yağız Enes DOĞAN, Ekip 4 üyesiyim."
+✅ "EV Charging SOC Manipulation Attack Simulation projesini sunacağım."
+✅ "Elektrikli araç şarj güvenliği konusunda kritik bir çalışma."
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 2. PROJE TANITIMI (2.5 dakika)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 PROBLEM:
+   • EV pazarı $800B+, hızla büyüyor
+   • Şarj istasyonu <-> Araç iletişimi güvenlik açığı var
+   • OCPP protokolü manipülasyona açık
+
+⚠️  SALDIRI SENARYOSU:
+   1. Normal: Batarya %30 → Şarj → %95'te dur
+   2. Saldırı: MITM proxy devreye giriyor
+   3. Manipülasyon: Gerçek %95 → Sahte %30 rapor ediliyor
+   4. Sonuç: Şarj devam ediyor → AŞIRI ŞARJ!
+
+💥 ETKİLER:
+   🔥 Yangın/patlama riski
+   🌡️ Kritik sıcaklık (60°C+)
+   🔋 Batarya ömrü azalması
+   ⚡ Ekipman hasarı
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💻 3. TEKNİK MİMARİ (2 dakika)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6 ANA MODÜL:
+
+1️⃣  BMS          → Batarya simülasyonu, SOC/voltage/temp takibi
+2️⃣  OCPP         → İstasyon-araç iletişimi, mesajlaşma
+3️⃣  ATTACK       → SOC manipulator, MITM proxy
+4️⃣  SECURITY     → HMAC-SHA256, RSA-2048, anomali tespiti
+5️⃣  CAN BUS      → Araç içi iletişim simülasyonu
+6️⃣  UTILS        → Loglama, görselleştirme
+
+📊 SAYILAR:
+   • 3,500+ satır Python kodu
+   • 15+ unit test
+   • Python 3.13.7 + modern libraries
+   • cryptography, numpy, matplotlib, websockets
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 4. DEMO (2 dakika)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔴 DEMO 1: Saldırı (demo_attack.py)
+   ✓ Normal şarj başlar (%30)
+   ✓ 10 saniye normal
+   ✓ MITM aktive → SOC manipülasyonu
+   ✓ Gerçek SOC %100+ → AŞIRI ŞARJ
+   ✓ Sıcaklık 60°C+ → KRİTİK
+   ✓ Grafik: Real vs Fake SOC
+
+🟢 DEMO 2: Güvenli Sistem (demo_secure.py)
+   ✓ Kriptografik koruma aktif
+   ✓ Normal şarj %30 → %95
+   ✓ Saldırı denemesi
+   ✓ 3 KATMAN SAVUNMA:
+     1. HMAC doğrulama FAIL
+     2. BMS sensör uyumsuzluk
+     3. Integrity checker anomali
+   ✓ SALDIRI ENGELLENDİ ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 5. SWOT ANALİZİ (2.5 dakika) - ANA BÖLÜM!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💪 STRENGTHS (Güçlü Yönler):
+   ✅ Gerçekçi simülasyon (BMS + OCPP + CAN)
+   ✅ Çok katmanlı güvenlik (HMAC + RSA + Timestamp)
+   ✅ Modüler mimari, genişletilebilir
+   ✅ 15+ test, yüksek coverage
+   ✅ İki taraflı: Saldırı + Savunma
+   ✅ Pratik eğitim değeri (hands-on)
+   ✅ Detaylı dokümantasyon
+   ✅ Modern tech stack (Python 3.13+)
+
+⚠️  WEAKNESSES (Zayıf Yönler):
+   ❌ Gerçek donanım yok (simülasyon)
+   ❌ Tam OCPP 2.0.1 yok
+   ❌ GUI arayüzü eksik
+   ❌ TLS/SSL implementasyonu sınırlı
+   ❌ Database persistent storage yok
+   ❌ Multi-vehicle desteği yok
+   ❌ CI/CD pipeline kurulu değil
+   ❌ API documentation eksik
+
+🌟 OPPORTUNITIES (Fırsatlar):
+   🎯 EV pazarı $800B+, %20 YoY growth
+   🎯 Cybersecurity eğitim talebi artıyor
+   🎯 ISO 15118 compliance zorunlu oluyor
+   🎯 ML/AI anomaly detection entegrasyonu
+   🎯 Blockchain transaction verification
+   🎯 Commercial SaaS platform
+   🎯 Online course (Udemy, Coursera)
+   🎯 EV Security Certification
+   🎯 Academic papers (IEEE, ACM)
+   🎯 University partnerships
+
+🚨 THREATS (Tehditler):
+   ⚡ Kötüye kullanım riski
+   ⚡ Yasal sorumluluk belirsizliği
+   ⚡ Ticari rakipler (Tenable, Nessus)
+   ⚡ 3rd party dependency zafiyetleri
+   ⚡ Python version compatibility
+   ⚡ Funding challenges
+   ⚡ Maintenance burden
+   ⚡ False positive güvenilirlik
+   ⚡ Regulatory scrutiny
+   ⚡ Technology obsolescence
+
+📊 GENEL PUAN: 4.2/5.0 ⭐⭐⭐⭐
+
+   Kategori Puanları:
+   • Eğitim Değeri:      ⭐⭐⭐⭐⭐ 5/5
+   • Gelecek Potansiyeli: ⭐⭐⭐⭐⭐ 5/5
+   • Teknik Kalite:      ⭐⭐⭐⭐  4/5
+   • Kullanılabilirlik:  ⭐⭐⭐⭐  4/5
+   • Dokümantasyon:      ⭐⭐⭐    3/5
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📈 6. STRATEJİK ÖNERİLER (1 dakika)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔥 KISA VADE (0-6 ay):
+   1. Yasal uyarıları güçlendir
+   2. CI/CD pipeline kur
+   3. Code coverage %80+'a çıkar
+   4. API documentation tamamla
+   5. Config file sistemi
+
+⚡ ORTA VADE (6-12 ay):
+   1. Web-based GUI (Flask + React)
+   2. ML-based anomaly detection
+   3. Database layer (SQLite → PostgreSQL)
+   4. Multi-vehicle support
+   5. Security audit
+
+🚀 UZUN VADE (12+ ay):
+   1. Enterprise edition
+   2. Hardware integration
+   3. Cloud SaaS platform
+   4. Certification program
+   5. International expansion
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🛡️ 7. GÜVENLİK ÇÖZÜMLERİ (1 dakika)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3 KATMANLI SAVUNMA (Defense-in-Depth):
+
+1️⃣  KRİPTOGRAFİK KORUMA:
+   • HMAC-SHA256 mesaj imzalama
+   • RSA-2048 digital signature
+   • Manipülasyon anında tespit
+
+2️⃣  BMS BAĞIMSIZ DOĞRULAMA:
+   • Kendi sensörleriyle ölçüm
+   • Gelen mesaj ile karşılaştırma
+   • %5+ sapma → Alarm
+   • İstasyondan bağımsız karar
+
+3️⃣  ANOMALİ TESPİTİ:
+   • İstatistiksel analiz
+   • Fiziksel tutarlılık kontrolü
+   • Rate limiting
+   • Pattern matching
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎓 8. EĞİTİM DEĞERİ (30 saniye)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ÖĞRENİLENLER:
+   ✓ MITM saldırıları
+   ✓ Kriptografik koruma
+   ✓ EV sistemleri (BMS, OCPP, CAN)
+   ✓ Anomali tespiti
+   ✓ Defense-in-depth
+   ✓ Python security programming
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 9. SONUÇ (1 dakika)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BAŞARILAR:
+   ✅ Kritik güvenlik açığı simüle edildi
+   ✅ Etkili çözümler gösterildi
+   ✅ Kapsamlı eğitim platformu oluşturuldu
+   ✅ 3,500+ satır kaliteli kod
+   ✅ Detaylı dokümantasyon
+
+GELECEK:
+   • Kısa vade: CI/CD, GUI
+   • Orta vade: ML, database
+   • Uzun vade: Commercial, cloud
+
+TOPLUMSAL ETKİ:
+   • EV güvenliği kritik
+   • Farkındalık yaratıyoruz
+   • Güvenlik uzmanları yetiştiriyoruz
+
+⚠️  ETİK UYARI:
+   "Sadece eğitim amaçlı!
+    Gerçek sistemlerde izinsiz test YASA DIŞI!"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎬 10. KAPANIŞ (30 saniye)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"Projeyi GitHub'da açık kaynak olarak paylaşacağım.
+ Katkıda bulunmak isteyenler davetlidir.
+
+ Ekip 4 arkadaşlarıma, hocalarımıza ve sizlere teşekkür ederim.
+
+ EV güvenliği, hepimizin sorumluluğu.
+ Birlikte daha güvenli bir gelecek inşa edebiliriz.
+
+ Yağız Enes DOĞAN - Ekip 4
+ EV Charging SOC Manipulation Attack Simulation
+
+ Güvenli şarjlar! ⚡🔒"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 HATIRLATMALAR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ SWOT bölümüne ekstra zaman ayır (2.5 dakika)
+✓ Sayıları net söyle: $800B, 4.2/5.0, 3,500+ kod
+✓ Etik uyarıyı vurgula
+✓ Enerjik ve canlı konuş
+✓ Göz teması (kameraya bak)
+✓ Demo videolarını göster
+✓ SWOT tablosunu görselleştir
+
+TOPLAM SÜRE: ~12-13 dakika
+SORU ZAMANI: +2-3 dakika
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 ANAHTAR KELİMELER (Mutlaka Söyle)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• MITM (Man-in-the-Middle)
+• SOC Manipulation
+• HMAC-SHA256, RSA-2048
+• Defense-in-Depth
+• Aşırı Şarj Riski
+• 4.2/5.0 Puan
+• $800B EV Pazarı
+• 3 Katmanlı Savunma
+• Eğitim Amaçlı
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 DEMO KOMUTLARI (Gösterebilirsin)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+pip install -r requirements.txt
+python quickstart.py
+python demos/demo_attack.py
+python demos/demo_secure.py
+pytest tests/ -v
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BAŞARILAR! 🚀 SEN YAPABILIRSIN! 💪
+
+Bu cheat sheet'i kamera önünde bulundur, gerektiğinde göz at.
+Ezberlemene gerek yok, doğal konuş, kendi kelimelerinle anlat.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+

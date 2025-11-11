@@ -1,0 +1,164 @@
+﻿â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—
+â•‘                                                                       â•‘
+â•‘   âš¡ EV CHARGING SOC MANIPULATION ATTACK SIMULATION âš¡               â•‘
+â•‘                                                                       â•‘
+â•‘   Elektrikli AraÃ§ Åarj Ä°stasyonu                                     â•‘
+â•‘   SOC ManipÃ¼lasyonu SaldÄ±rÄ± SimÃ¼lasyonu                              â•‘
+â•‘                                                                       â•‘
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+ğŸ“Š PROJE Ã–ZET RAPORU
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+âœ… Proje baÅŸarÄ±yla oluÅŸturuldu!
+
+ğŸ“ PROJE YAPISI
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+Toplam Dosya: 30 adet
+Toplam SatÄ±r: ~3,500+ satÄ±r Python kodu
+
+ğŸ“‚ ModÃ¼ller:
+  â€¢ src/bms/          - Battery Management System (2 modÃ¼l)
+  â€¢ src/ocpp/         - OCPP Protocol (2 modÃ¼l)
+  â€¢ src/attack/       - Attack Simulations (2 modÃ¼l)
+  â€¢ src/security/     - Security Mechanisms (2 modÃ¼l)
+  â€¢ src/can_bus/      - CAN Bus Simulator (1 modÃ¼l)
+  â€¢ src/utils/        - Utilities (2 modÃ¼l)
+  â€¢ demos/            - Demo Scripts (2 demo)
+  â€¢ tests/            - Test Suites (2 test suite)
+
+ğŸ“„ DokÃ¼mantasyon:
+  â€¢ README.md              - Ana dokÃ¼mantasyon (detaylÄ±)
+  â€¢ QUICKSTART.md          - HÄ±zlÄ± baÅŸlangÄ±Ã§ rehberi
+  â€¢ USAGE_EXAMPLES.md      - KullanÄ±m Ã¶rnekleri
+  â€¢ PROJECT_STRUCTURE.txt  - Proje yapÄ±sÄ±
+  â€¢ requirements.txt       - Python baÄŸÄ±mlÄ±lÄ±klarÄ±
+
+ğŸ¯ Ã–ZELLÄ°KLER
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+ğŸ”´ SALDIRI SÄ°MÃœLASYONU:
+  âœ… SOC ManipÃ¼lasyon saldÄ±rÄ±sÄ±
+  âœ… MITM (Man-in-the-Middle) proxy
+  âœ… Replay attack
+  âœ… Temperature hiding attack
+  âœ… Slow poison attack
+  âœ… CAN bus mesaj enjeksiyonu
+
+ğŸ›¡ï¸  GÃœVENLÄ°K MEKANÄ°ZMALARI:
+  âœ… HMAC-SHA256 mesaj bÃ¼tÃ¼nlÃ¼ÄŸÃ¼
+  âœ… RSA-2048 dijital imzalama
+  âœ… Zaman damgasÄ± doÄŸrulama
+  âœ… BMS baÄŸÄ±msÄ±z sensÃ¶r validasyonu
+  âœ… Anomali tespiti
+  âœ… Veri bÃ¼tÃ¼nlÃ¼ÄŸÃ¼ kontrolÃ¼
+
+ğŸ”‹ BATARYA YÃ–NETÄ°MÄ°:
+  âœ… GerÃ§ekÃ§i batarya simÃ¼lasyonu
+  âœ… SOC, voltaj, akÄ±m, sÄ±caklÄ±k takibi
+  âœ… AÅŸÄ±rÄ± ÅŸarj tespiti
+  âœ… AÅŸÄ±rÄ± Ä±sÄ±nma tespiti
+  âœ… Batarya saÄŸlÄ±k skoru
+
+ğŸ“¡ Ä°LETÄ°ÅÄ°M PROTOKOLLERÄ°:
+  âœ… OCPP mesajlaÅŸma
+  âœ… CAN bus simÃ¼lasyonu
+  âœ… Åarj istasyonu protokolÃ¼
+
+ğŸ“Š GÃ–RSELLEÅTÄ°RME & LOGLAMA:
+  âœ… GerÃ§ek zamanlÄ± grafik gÃ¶sterimi
+  âœ… Zafiyet vs GÃ¼venli karÅŸÄ±laÅŸtÄ±rma
+  âœ… DetaylÄ± JSON loglama
+  âœ… SaldÄ±rÄ± zaman Ã§izelgesi
+  âœ… Anomali raporlarÄ±
+
+ğŸ§ª TEST COVERAGE:
+  âœ… 15+ unit test
+  âœ… Zafiyet testleri
+  âœ… GÃ¼venlik testleri
+  âœ… SaldÄ±rÄ± vektÃ¶rÃ¼ testleri
+
+ğŸš€ KULLANIM
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+1ï¸âƒ£  HÄ±zlÄ± BaÅŸlangÄ±Ã§:
+   python quickstart.py
+
+2ï¸âƒ£  SaldÄ±rÄ± Demosu:
+   python demos/demo_attack.py
+
+3ï¸âƒ£  GÃ¼venli Sistem Demosu:
+   python demos/demo_secure.py
+
+4ï¸âƒ£  Testleri Ã‡alÄ±ÅŸtÄ±r:
+   pytest tests/ -v
+
+ğŸ“š SENARYONuN AMACI
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+Bu proje ÅŸu kritik gÃ¼venlik aÃ§Ä±ÄŸÄ±nÄ± gÃ¶sterir:
+
+âš ï¸  PROBLEM:
+SaldÄ±rgan, araÃ§ ile ÅŸarj istasyonu arasÄ±ndaki OCPP iletiÅŸimini manipÃ¼le
+ederek batarya SOC deÄŸerini deÄŸiÅŸtirir. Batarya zaten %95+ dolu olmasÄ±na
+raÄŸmen, sistem %30 dolu olduÄŸunu sanÄ±r ve ÅŸarja devam eder.
+
+ğŸ’¥ SONUÃ‡:
+  â€¢ Batarya aÅŸÄ±rÄ± ÅŸarj olur (SOC > %100)
+  â€¢ SÄ±caklÄ±k kritik seviyelere ulaÅŸÄ±r (>60Â°C)
+  â€¢ YangÄ±n ve patlama riski
+  â€¢ Batarya Ã¶mrÃ¼ ciddi ÅŸekilde azalÄ±r
+  â€¢ Ekipman hasarÄ±
+
+âœ… Ã‡Ã–ZÃœM:
+Kriptografik imzalama, baÄŸÄ±msÄ±z sensÃ¶r doÄŸrulama ve anomali tespiti
+ile saldÄ±rÄ± tespit edilir ve engellenir.
+
+ğŸ“ Ã–ÄRENME HEDEFLERÄ°
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+Bu projeyi tamamladÄ±ktan sonra ÅŸunlarÄ± Ã¶ÄŸrenirsiniz:
+
+  ğŸ“Œ Siber gÃ¼venlik saldÄ±rÄ± vektÃ¶rleri
+  ğŸ“Œ MITM (Man-in-the-Middle) saldÄ±rÄ±larÄ±
+  ğŸ“Œ Kriptografik koruma mekanizmalarÄ±
+  ğŸ“Œ Elektrikli araÃ§ sistemleri (BMS, OCPP, CAN)
+  ğŸ“Œ Python ile gÃ¼venlik testi
+  ğŸ“Œ Veri bÃ¼tÃ¼nlÃ¼ÄŸÃ¼ ve kimlik doÄŸrulama
+  ğŸ“Œ Anomali tespiti teknikleri
+
+âš–ï¸  YASAL UYARI
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+âš ï¸  Bu proje sadece EÄÄ°TÄ°M ve ARAÅTIRMA amaÃ§lÄ±dÄ±r.
+
+âŒ GerÃ§ek sistemlerde izinsiz test yapmak YASA DIÅIDIR.
+âœ… Sadece test ortamlarÄ±nda ve yetkili sistemlerde kullanÄ±n.
+ğŸ“š Siber gÃ¼venlik Ã¶ÄŸrenim amacÄ±yla kullanÄ±n.
+
+ğŸ”— KAYNAKLAR
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+  â€¢ OCPP Specification: https://www.openchargealliance.org/
+  â€¢ ISO 15118: https://www.iso.org/
+  â€¢ OWASP IoT Security: https://owasp.org/www-project-internet-of-things/
+  â€¢ CAN Bus Security: https://www.cisa.gov/
+
+ğŸ“ DESTEK
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+SorularÄ±nÄ±z iÃ§in:
+  â€¢ README.md dosyasÄ±nÄ± okuyun
+  â€¢ USAGE_EXAMPLES.md dosyasÄ±na bakÄ±n
+  â€¢ Test dosyalarÄ±nÄ± inceleyin (tests/)
+
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+âœ¨ Proje hazÄ±r! Hemen baÅŸlayabilirsiniz:
+
+   1. pip install -r requirements.txt
+   2. python quickstart.py
+
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+Ä°yi Ã§alÄ±ÅŸmalar! ğŸš€
