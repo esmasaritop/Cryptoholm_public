@@ -19,8 +19,9 @@ Bu proje, akademik literatürde tanımlanan üç kritik otonom araç güvenlik a
 1. **Güvenlik ve Gecikme Paradoksu** (Security vs. Latency Paradox)
 2. **Mahremiyet için Kalıcılık Kullanımı** (Privacy vs. Immutability Anomaly)
 3. **Kanıtın Kendi Kendini Yok Etmesi** (Self-Destructing Evidence Anomaly)
+4. **BONUS: OCPP 1.6 Şarj İstasyonu Simulator** - Elektrikli araç şarj protokolü
 
-Her anomali için tam işlevli Python implementasyonları ve interaktif demonstrasyonlar içerir.
+Her anomali için tam işlevsel Python implementasyonları ve interaktif demonstrasyonlar içerir.
 
 ## 🔍 Anomaliler ve Çözümleri
 
@@ -95,6 +96,43 @@ Adli bilişimde, kaza sonrası dijital kanıtlara (hız, frenleme, sistem loglar
 
 **Dosya:** `anomaly3_forensic_evidence.py`
 
+---
+
+### 🔌 BONUS: OCPP 1.6 Elektrikli Araç Şarj Protokolü
+
+**Protokol:** Open Charge Point Protocol 1.6
+
+#### Nedir?
+Elektrikli araç şarj istasyonları ile merkezi yönetim sistemi arasındaki iletişim protokolü. Yetkilendirme, şarj başlatma/durdurma, fiyatlandırma ve durum takibi sağlar.
+
+#### Çözüm: WebSocket Tabanlı OCPP Simulator
+```
+Merkezi Sistem (Central System)    ←→    Şarj İstasyonu (Charge Point)
+    ↓                                           ↓
+- Yetkilendirme (RFID kartlar)           - BootNotification
+- İşlem yönetimi                         - StatusNotification  
+- Fatura hesaplama                       - Heartbeat
+- Kullanıcı bakiyesi                     - StartTransaction / StopTransaction
+```
+
+**Temel Özellikler:**
+- WebSocket üzerinden gerçek zamanlı iletişim
+- OCPP 1.6 mesaj formatları (CALL, CALL_RESULT, CALL_ERROR)
+- Kullanıcı yetkilendirme sistemi
+- Şarj simülasyonu (7.4 kW güç)
+- Otomatik fiyat hesaplama (TL/kWh)
+- Transaction lifecycle yönetimi
+
+**Desteklenen Mesajlar:**
+- `BootNotification` - İstasyon tanıtımı
+- `Authorize` - Kullanıcı yetkilendirme
+- `StartTransaction` - Şarj başlatma
+- `StopTransaction` - Şarj durdurma ve fatura
+- `Heartbeat` - Bağlantı kontrolü
+- `StatusNotification` - Durum bildirimi
+
+**Dosya:** `ocpp_charging_simulator.py`
+
 ## 💻 Kurulum
 
 ### Gereksinimler
@@ -118,6 +156,7 @@ pip install -r requirements.txt
 - `numpy` - Numerik hesaplamalar
 - `colorama` - Renkli terminal çıktısı
 - `tabulate` - Tablo formatında çıktı
+- `websockets` - OCPP WebSocket iletişimi
 
 ## 🚀 Kullanım
 
@@ -130,8 +169,9 @@ python main.py
 - **1:** Anomali 1 demonstrasyonu
 - **2:** Anomali 2 demonstrasyonu
 - **3:** Anomali 3 demonstrasyonu
-- **4:** Tüm anomalileri sırayla göster
-- **5:** Hakkında bilgisi
+- **4:** OCPP 1.6 Şarj İstasyonu Simulator
+- **5:** Tüm anomalileri sırayla göster
+- **6:** Hakkında bilgisi
 - **0:** Çıkış
 
 ### Bireysel Modülleri Çalıştırma
@@ -147,6 +187,9 @@ python anomaly2_privacy_blockchain.py
 
 # Anomali 3: Kanıtın Kendi Kendini Yok Etmesi
 python anomaly3_forensic_evidence.py
+
+# OCPP 1.6 Şarj İstasyonu Simulator
+python ocpp_charging_simulator.py
 ```
 
 ## 📁 Modül Yapısı
@@ -158,7 +201,10 @@ CypherCar/
 ├── anomaly1_security_latency.py     # Anomali 1: Adaptif Güvenlik Sistemi
 ├── anomaly2_privacy_blockchain.py   # Anomali 2: Hibrit Blockchain Sistemi
 ├── anomaly3_forensic_evidence.py    # Anomali 3: Redundant Storage Sistemi
+├── ocpp_charging_simulator.py       # OCPP 1.6 Şarj İstasyonu Simulator
 ├── requirements.txt                 # Python bağımlılıkları
+├── run.sh                           # Otomatik başlatma scripti
+├── .gitignore                       # Git ignore dosyası
 └── README.md                        # Bu dosya
 ```
 

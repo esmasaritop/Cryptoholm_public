@@ -26,6 +26,7 @@ try:
     from anomaly1_security_latency import demonstrate_anomaly_solution as demo1
     from anomaly2_privacy_blockchain import demonstrate_anomaly_solution as demo2
     from anomaly3_forensic_evidence import demonstrate_anomaly_solution as demo3
+    from ocpp_charging_simulator import run_demo as demo_ocpp
 except ImportError as e:
     print(f"HATA: Modüller yüklenemedi: {e}")
     print("Lütfen tüm anomali modüllerinin aynı dizinde olduğundan emin olun.")
@@ -64,8 +65,11 @@ def print_menu():
 {Fore.WHITE}║     {Fore.CYAN}→ Çok Katmanlı Dayanıklı Veri Saklama Sistemi                  {Fore.GREEN}║
 {Fore.WHITE}║     {Fore.MAGENTA}(Strandberg, K., et al. 2022 - Automotive Forensics)           {Fore.GREEN}║
 {Fore.GREEN}║                                                                        ║
-{Fore.YELLOW}║  4. {Fore.WHITE}Tüm Anomalileri Sırayla Göster                                 {Fore.GREEN}║
-{Fore.YELLOW}║  5. {Fore.WHITE}Hakkında                                                       {Fore.GREEN}║
+{Fore.YELLOW}║  4. {Fore.WHITE}OCPP 1.6 Şarj İstasyonu Simulator                              {Fore.GREEN}║
+{Fore.WHITE}║     {Fore.CYAN}→ Elektrikli Araç Şarj Protokolü Demo                          {Fore.GREEN}║
+{Fore.GREEN}║                                                                        ║
+{Fore.YELLOW}║  5. {Fore.WHITE}Tüm Anomalileri Sırayla Göster                                 {Fore.GREEN}║
+{Fore.YELLOW}║  6. {Fore.WHITE}Hakkında                                                       {Fore.GREEN}║
 {Fore.YELLOW}║  0. {Fore.RED}Çıkış                                                          {Fore.GREEN}║
 {Fore.GREEN}║                                                                        ║
 {Fore.GREEN}╚════════════════════════════════════════════════════════════════════════╝{Style.RESET_ALL}
@@ -170,6 +174,20 @@ def run_all_anomalies():
     print(f"{Fore.GREEN}{'=' * 80}{Style.RESET_ALL}\n")
 
 
+def run_ocpp_demo():
+    """OCPP simulator'ı çalıştır"""
+    print(f"\n{Fore.YELLOW}OCPP 1.6 Şarj İstasyonu Simulator başlatılıyor...{Style.RESET_ALL}\n")
+    time.sleep(1)
+    
+    try:
+        import asyncio
+        asyncio.run(demo_ocpp())
+        print(f"\n{Fore.GREEN}✓ OCPP Demonstrasyonu tamamlandı!{Style.RESET_ALL}")
+    except Exception as e:
+        print(f"\n{Fore.RED}HATA: OCPP simulator çalıştırılırken bir hata oluştu:{Style.RESET_ALL}")
+        print(f"{Fore.RED}{str(e)}{Style.RESET_ALL}")
+
+
 def main():
     """Ana program döngüsü"""
     print_banner()
@@ -178,7 +196,7 @@ def main():
         print_menu()
         
         try:
-            choice = input(f"{Fore.YELLOW}Seçiminiz (0-5): {Style.RESET_ALL}").strip()
+            choice = input(f"{Fore.YELLOW}Seçiminiz (0-6): {Style.RESET_ALL}").strip()
             
             if choice == '0':
                 print(f"\n{Fore.CYAN}CypherCar'dan ayrılıyorsunuz. Güvenli sürüşler! 🚗{Style.RESET_ALL}\n")
@@ -194,17 +212,20 @@ def main():
                 run_anomaly(3)
             
             elif choice == '4':
+                run_ocpp_demo()
+            
+            elif choice == '5':
                 confirm = input(f"\n{Fore.YELLOW}Tüm demonstrasyonlar sırayla çalıştırılacak. Devam etmek istiyor musunuz? (e/h): {Style.RESET_ALL}").strip().lower()
                 if confirm == 'e' or confirm == 'evet':
                     run_all_anomalies()
                 else:
                     print(f"{Fore.CYAN}İptal edildi.{Style.RESET_ALL}")
             
-            elif choice == '5':
+            elif choice == '6':
                 print_about()
             
             else:
-                print(f"{Fore.RED}Geçersiz seçim! Lütfen 0-5 arasında bir sayı girin.{Style.RESET_ALL}")
+                print(f"{Fore.RED}Geçersiz seçim! Lütfen 0-6 arasında bir sayı girin.{Style.RESET_ALL}")
             
             # Devam için bekle
             if choice != '0':
