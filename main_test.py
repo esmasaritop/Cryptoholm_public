@@ -3,7 +3,6 @@ from lidar_simulator import LidarSimulator
 from decision_ecu import DecisionECU
 
 # --- KARAR VERİCİ ECU'nun AÇIK Anahtarı ---
-# key_generator.py çıktısındaki "KARAR VERİCİ ECU (Receiver) Keys" altındaki Public Key'dir.
 ECU_RECEIVER_PUBLIC_KEY = """
 -----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEKr6YQcYCCfLQn7YbhQmelgfVhdP2Tywl
@@ -29,7 +28,6 @@ if __name__ == '__main__':
     # main_test.py dosyasında, SENARYO 1 kısmında, Satır 31 civarında:
 
     # 2. Yasal Mesaj Akışı (Yolda araç var)
-    # 🛑 DÜZELTME: lidar_simulator.py'den 4 değer döndüğünü varsayarak yakalıyoruz.
     sender_id, data_str, data_hash, signature = lidar_sim.generate_and_sign_data(is_fake_data=False)
 
     # Mesajı Karar Verici ECU'ya gönder (DLT'de kaydı yapılmış, imzası doğru)
@@ -54,7 +52,6 @@ if __name__ == '__main__':
     # Not: Burada signature, Senaryo 1'de üretilen YASAL imzadır.
     # Saldırgan bu imzayı ve sahte veriyi Karar Verici ECU'ya gönderir.
 
-    # 🛑 DÜZELTME: ecu.process_data'ya gönderirken sender_id'yi ekleyin
     success, result = ecu.process_data(sender_id, fake_data_str, signature)
 
     if not success and "Bütünlük Hatası" in result:
