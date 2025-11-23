@@ -2,15 +2,6 @@ CAN-Bus Güvenlik Analizi ve Savunma Simülasyonu
 📖 Proje Özeti
 Bu proje, Akıllı Ulaşım Sistemlerinin (ITS) ve Bağlantılı Araçların (Connected Vehicles) omurgasını oluşturan CAN-Bus (Controller Area Network) protokolünün mimari zafiyetlerini analiz etmek ve bu zafiyetlerin potansiyel istismar senaryolarını güvenli bir sanal ortamda simüle etmek amacıyla geliştirilmiştir. Modern araçların siber-fiziksel sistemler haline gelmesiyle birlikte, bu sistemlerin güvenliği kritik önem taşımaktadır. Proje, CAN-Bus'ın kimlik doğrulama, şifreleme ve mesaj bütünlüğü kontrollerinden yoksun olmasının yarattığı risklere dikkat çekmekte ve savunma mekanizmalarının geliştirilmesine odaklanmaktadır.
 
-🎯 Temel Odak Noktaları
-Özellik	Açıklama
-📡 Sanal CAN Ağı (vcan)	Gerçek donanım gereksinimi olmadan, Linux'un vcan sanal arayüzü üzerinden araç içi ağ iletişimi simülasyonu.
-🛑 Eğitsel Saldırı Simülasyonu	Mesaj Enjeksiyonu ve ECU Manipülasyonu gibi teorik zafiyetlerin pratik bir öğrenme ortamında nasıl kullanılabileceğinin gösterilmesi.
-🔍 Trafik İzleme ve Analizi	CAN trafiğini gerçek zamanlı izleme (Sniffing) ve meşru/anormal mesaj kalıplarını ayrıştırma.
-🛡️ Anomali Tespiti	Ağdaki beklenmeyen veya güvenlik ihlali gösteren mesaj kalıplarının tespiti ve savunma mekanizmalarının geliştirilmesi (Geliştirme Aşamasında).
-
-E-Tablolar'a aktar
-
 ⚠️ Odaklanılan Güvenlik Senaryosu: Güvensiz Mesaj Mantığı ve ECU Susturma
 Bu projenin temel senaryosu, CAN protokolünün Yayın (Broadcast) mimarisinden kaynaklanan zafiyetleri kullanarak, kritik araç işlevlerinin (Örn: Fren Sistemi) nasıl manipüle edilebileceğini göstermektedir.
 
@@ -33,7 +24,7 @@ Zafiyet: Susturulan meşru ECU'nun yokluğunda, ağdaki diğer düğümler (ECU'
 
 Simülasyon: Saldırgan, kritik komutları (Örn: Frenleri Devre Dışı Bırak, Motoru Durdur) göndererek araç sistemlerinin tam kontrolünü ele geçirdiğini simüle eder.
 
-⚙️ Kurulum ve Test Ortamı
+Kurulum ve Test Ortamı
 Simülasyonun güvenli bir şekilde ve donanımdan bağımsız çalıştırılması için Linux tabanlı bir işletim sistemi (veya WSL2) ve sanal CAN arayüzü kullanılmaktadır.
 
 Ön Gereksinimler
@@ -51,7 +42,8 @@ Bash
 sudo modprobe vcan
 sudo ip link add dev vcan0 type vcan
 sudo ip link set up vcan0
-🚀 Savunma Amaçlı Simülasyon Akışı
+
+Savunma Amaçlı Simülasyon Akışı
 Simülasyon, bir savunma araştırmacısının gözünden üç ana bileşenin etkileşimini izler:
 
 Sniffer.py (Gözlemci): Saldırı öncesi, sırası ve sonrasındaki tüm CAN trafiğini kaydeder ve anormal durumları tespit etmeye çalışır. Bu bileşen, savunma çözümünün temelidir.
