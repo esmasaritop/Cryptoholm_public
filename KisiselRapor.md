@@ -96,3 +96,34 @@ candump vcan0
 # Veya Python tabanlı izleyicimiz ile:
 python sniffer.py
 ```
+### 2. Adım: Meşru ECU'yu Çalıştırın
+İkinci bir terminalde, aracın normal fren kontrol ünitesini simüle edin:
+
+```bash
+python legitimate_ecu.py
+```
+
+Gözlem: candump ekranında düzenli aralıklarla (örn. 0.1s) normal durum mesajlarının aktığını göreceksiniz.
+
+### 3. Adım: Saldırıyı Başlatın ☠️
+Üçüncü bir terminalde saldırı scriptini çalıştırın:
+
+```bash
+python attacker.py
+```
+Gözlem:
+
+İlk başta ağda çelişkili mesajlar göreceksiniz.
+
+Ardından saldırgan "Diagnostic Session Control" paketi göndererek meşru ECU'yu susturacak.
+
+Son olarak, sadece saldırganın gönderdiği manipüle edilmiş mesajların ağda aktığını ve sistemin kontrolünün ele geçirildiğini gözlemleyeceksiniz.
+
+📚 Kaynakça
+Bu proje aşağıdaki akademik çalışmalardan yararlanılarak hazırlanmıştır:
+
+[1] Pundir, A., Singh, S., Kumar, M., Bafila, A., & Saxena, G. J. (2022). Cyber-physical systems enabled transport networks in smart cities: Challenges and enabling technologies of the new mobility era. IEEE Access, 10, 16350-16364.
+
+[2] Koscher, K., Czeskis, A., Roesner, F., Patel, S., Kohno, T., Checkoway, S., ... & Savage, S. (2010). Experimental security analysis of a modern automobile. IEEE Symposium on Security and Privacy.
+
+[3] Mullet, V., Sondi, P., & Ramat, E. (2021). A review of cybersecurity guidelines for manufacturing factories in industry 4.0. IEEE Access.
