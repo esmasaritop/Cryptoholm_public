@@ -1,55 +1,55 @@
-CAN-Bus Güvenlik Analizi ve Savunma Simülasyonu
-📖 Proje Özeti
-Bu proje, Akıllı Ulaşım Sistemlerinin (ITS) ve Bağlantılı Araçların (Connected Vehicles) omurgasını oluşturan CAN-Bus (Controller Area Network) protokolünün mimari zafiyetlerini analiz etmek ve bu zafiyetlerin potansiyel istismar senaryolarını güvenli bir sanal ortamda simüle etmek amacıyla geliştirilmiştir. Modern araçların siber-fiziksel sistemler haline gelmesiyle birlikte, bu sistemlerin güvenliği kritik önem taşımaktadır. Proje, CAN-Bus'ın kimlik doğrulama, şifreleme ve mesaj bütünlüğü kontrollerinden yoksun olmasının yarattığı risklere dikkat çekmekte ve savunma mekanizmalarının geliştirilmesine odaklanmaktadır.
+CAN-Bus İletişim Güvenlik Analizi: Kaynak Kimlik Doğrulama Zafiyeti Simülasyonu
+1. Özet
+Bu rapor, araç içi iletişimde standart olan Controller Area Network (CAN-Bus) protokolünün temel mimari eksikliklerinden biri olan Mesaj Kaynak Kimlik Doğrulama (Authentication) Zafiyetini incelemektedir. CAN protokolü, mesajların kaynağını doğrulamadığı için, yetkisiz bir aktörün meşru bir ECU'yu taklit ederek hayati sistemlere sahte komutlar göndermesine olanak tanıyan "Sahte Giriş (Impersonation) Anomalisi" riskini ortaya koymaktadır. Proje, bu zafiyetin sanal bir ortamda simülasyonunu gerçekleştirerek, savunma mekanizmalarının (IDS) geliştirilmesine zemin hazırlamaktadır.
 
-⚠️ Odaklanılan Güvenlik Senaryosu: Güvensiz Mesaj Mantığı ve ECU Susturma
-Bu projenin temel senaryosu, CAN protokolünün Yayın (Broadcast) mimarisinden kaynaklanan zafiyetleri kullanarak, kritik araç işlevlerinin (Örn: Fren Sistemi) nasıl manipüle edilebileceğini göstermektedir.
+2. Proje Hedefleri ve Kapsam
+CAN-Bus güvenliğindeki kritik boşlukları akademik ve savunma odaklı bir çerçevede göstermektir.
 
-Senaryo Adımlarının Savunma Perspektifinden İncelenmesi:
-Çelişkili Mesaj Enjeksiyonu (Conflicting Message Injection):
+Kategori	Hedeflenen Çözüm/Analiz
+Zafiyet Analizi	CAN ID'lerinin mesaj kaynağını doğrulayamamasının neden olduğu güvenlik açığının teorik ve pratik analizi.
+Simülasyon Ortamı	Linux'un vcan sanal arayüzü kullanılarak, donanımdan bağımsız ve izole bir CAN iletişim test ortamının oluşturulması.
+Saldırı Vektörü	Meşru bir ECU'nun CAN ID'si kullanılarak sahte mesajların enjekte edilmesi (Impersonation Spoofing).
+Savunma Mekanizması	Sahte girişten kaynaklanan Frekans Anormalliği ve Veri İçeriği Anormalliği gibi davranışsal parametreler üzerinden tespit stratejilerinin geliştirilmesi.
 
-Zafiyet: CAN protokolü, aynı ID'ye sahip birden fazla mesajı ayırt etmek için güvenlik mekanizmalarına sahip değildir.
+3. Uygulanan Senaryo: Sahte Giriş (Impersonation) Anomalisi
+CAN protokolünün Kimlik Doğrulama eksikliğini göstermek üzere, kritik bir ECU'nun davranışının taklit edilmesi ve bu taklidin ağ trafiğinde anomali olarak tespit edilmesi simüle edilmiştir.
 
-Simülasyon: Saldırgan (eğitsel amaçlı simülasyon), kritik bir ID (Örn: Fren komutu ID'si) kullanarak ağa sahte ve meşru komutla çelişen bir mesaj gönderir. Bu durum, aracın güvenli moda geçmesine neden olabilir.
+3.1. Senaryo Adımları
+Baseline (Normal Davranış) Oluşturma:
 
-ECU Susturma (Bus-Off/Suppressing):
+Legitimate_ECU.py çalıştırılarak, kritik bir CAN ID'si (Örn: 0x2A0) ile saniyede 10 kez (100ms periyotla) düzenli veri (Örn: Hız: 50 km/h) gönderimi başlatılır. Bu akış, Normal Çalışma Kalıbı olarak belirlenir.
 
-Zafiyet: Kritik sistemlerin geçici olarak devre dışı bırakılması için kullanılan Tanılama (Diagnostic) protokollerinin (UDS gibi) yetersiz kimlik doğrulama kontrolleri.
+Saldırı Vektörünün Devreye Alınması:
 
-Simülasyon: Saldırgan, meşru ECU'yu geçici olarak susturmak veya Bus-Off durumuna sokmak için özel olarak hazırlanmış bir Tanılama (Diagnostic Session Control) paketi gönderir. Bu, meşru ECU'nun savunma mekanizmalarını aşmanın bir yoludur.
+Attacker.py çalıştırılır ve meşru ECU ile aynı CAN ID'sini (0x2A0) kullanır.
 
-Tek Otorite Kontrolü ve Manipülasyon:
+Saldırgan, normal frekanstan daha sık (Örn: 10ms'de bir) ve kritik bir komut (Örn: Hız: 0 km/h veya Motor Durdurma Kodu) içeren sahte mesajları ağa enjekte eder.
 
-Zafiyet: Susturulan meşru ECU'nun yokluğunda, ağdaki diğer düğümler (ECU'lar) sadece saldırganın gönderdiği mesajlara güvenmek zorunda kalır.
+Anomali Tespiti:
 
-Simülasyon: Saldırgan, kritik komutları (Örn: Frenleri Devre Dışı Bırak, Motoru Durdur) göndererek araç sistemlerinin tam kontrolünü ele geçirdiğini simüle eder.
+Sniffer.py (IDS simülasyonu), 0x2A0 ID'sine ait gelen mesajları analiz eder.
 
-Kurulum ve Test Ortamı
-Simülasyonun güvenli bir şekilde ve donanımdan bağımsız çalıştırılması için Linux tabanlı bir işletim sistemi (veya WSL2) ve sanal CAN arayüzü kullanılmaktadır.
+Sistem, aynı ID'den kısa süre içinde hem 100ms periyotlu hem de 10ms periyotlu mesajların gelmesiyle Frekans Anormalliğini tespit eder. Aynı zamanda, veri alanındaki bilinen normal aralığın dışındaki içeriği tespit ederek Veri İçeriği Anormalliğini de doğrular.
 
-Ön Gereksinimler
-Python 3.x
+4. Kurulum ve Çalıştırma Talimatları
+Simülasyon, sanal bir ortamda güvenli bir şekilde yürütülmek üzere tasarlanmıştır.
 
-can-utils (Linux CAN araçları)
+4.1. Ön Gereksinimler
+İşletim Sistemi: Linux (veya WSL2)
 
-python-can kütüphanesi
+Bağımlılıklar: Python 3.x, can-utils, python-can kütüphanesi.
 
-Sanal CAN Arayüzü (vcan0) Başlatma
-Aşağıdaki komutlar, simülasyonun çalışacağı sanal veri yolunu oluşturur:
+4.2. Sanal CAN Arayüzünün Başlatılması
+Simülasyonun çalışacağı sanal veri yolunu oluşturmak ve etkinleştirmek için aşağıdaki komutlar sırasıyla yürütülür:
 
 Bash
-
 sudo modprobe vcan
 sudo ip link add dev vcan0 type vcan
 sudo ip link set up vcan0
+4.3. Simülasyon Bileşenlerinin Çalıştırılması
+Simülasyon akışı, üç ayrı terminal penceresinde eş zamanlı olarak gözlemlenmelidir:
 
-Savunma Amaçlı Simülasyon Akışı
-Simülasyon, bir savunma araştırmacısının gözünden üç ana bileşenin etkileşimini izler:
-
-Sniffer.py (Gözlemci): Saldırı öncesi, sırası ve sonrasındaki tüm CAN trafiğini kaydeder ve anormal durumları tespit etmeye çalışır. Bu bileşen, savunma çözümünün temelidir.
-
-Legitimate_ECU.py (Meşru Kontrol Ünitesi): Normal araç operasyonunu (düzenli kalp atışı mesajları) temsil eder.
-
-Attacker.py (Anomali Kaynağı): Güvenlik açıklarını kullanarak sisteme çelişkili veya susturucu mesajları enjekte eden, kontrol edilebilir bir anomaliyi simüle eder.
-
-Bu yapı, araştırmacıların ve öğrencilerin CAN trafiğindeki anormallikleri tanıma ve bunlara karşı filtreleme, kimlik doğrulama veya yapay zeka tabanlı anomali tespit mekanizmaları geliştirmesi için ideal bir test ortamı sunar.
+Terminal	Komut	Rol
+Terminal 1	python legitimate_ecu.py	Normal ECU Davranışı
+Terminal 2	python sniffer.py	Saldırı Tespit Sistemi (IDS) ve Anomali İzleme
+Terminal 3	python attacker.py	Sahte Giriş (Impersonation) Saldırısı
