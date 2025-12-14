@@ -1,0 +1,4 @@
+# Elektrikli Şarj İstasyonu Güvenlik Analizi
+- Hedef: Android tabanlı halka açık şarj üniteleri.
+- Yöntem: Wi-Fi üzerinden ağ analizi, Emülatör ile Digital Twin oluşturma.
+- İleri Seviye: Tersine mühendislik ile ödeme sistemi manipülasyonu.
