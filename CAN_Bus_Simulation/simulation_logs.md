@@ -1,5 +1,3 @@
----
-
 ### 3. Simülasyon Çıktıları
 
 ```markdown
